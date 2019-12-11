@@ -52,16 +52,15 @@
       "twitter": "eemeli_aro",
       "npm": "eemeli",
       "github": "eemeli",
-      "linkedin": "eemeliaro",
       "web": "https://eemeli.org/talks",
-      "work": "library developer"
+      "work": "Vincit"
     },
     "data": [
       "          <white>{{name}}</><green> / </><cyan>{{handle}}</>",
       "",
       {
         "label": "<blue>Work</>",
-        "text": "{{work}}"
+        "text": "Library developer at <lightblue>{{work}}</>"
       },
       "",
       {
