@@ -31,7 +31,6 @@
   ],
   "author": "Eemeli Aro",
   "license": "ISC",
-  "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.2.2",
     "@babel/preset-env": "^7.2.3",
