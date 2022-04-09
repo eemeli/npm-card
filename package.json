@@ -8,7 +8,7 @@
     "url": "https://github.com/eemeli/npm-card.git"
   },
   "scripts": {
-    "prepublishOnly": "rm -rf dist && webpack"
+    "prepublishOnly": "node src/build-dist.js"
   },
   "bin": {
     "eemeli": "dist/card.js"
