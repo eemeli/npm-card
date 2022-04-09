@@ -1,18 +1,17 @@
-"use strict";
+import boxen from "boxen";
+import chalker from "chalker";
+import get from "lodash.get";
 
-const boxen = require("boxen");
-const chalker = require("chalker");
-const get = require("lodash.get");
-const cardStyle = require("./style.js");
+import cardStyle from "./style.js";
 
-module.exports = function makeCard(pkg) {
+export function makeCard(pkg) {
   // get myCard info from package
   const myCard = pkg.myCard;
   const info = Object.assign({ _packageName: pkg.name }, myCard.info);
   const data = myCard.data;
 
   // replace {{token}} in string with info[token]
-  const processString = (str) =>
+  const processString = str =>
     str.replace(/{{([^}]+)}}/g, (a, b) => get(info, b, ""));
 
   // find the longest label string and its corresponding URL
@@ -29,7 +28,7 @@ module.exports = function makeCard(pkg) {
   );
 
   const defaultStyle = Object.assign(
-    { label: (x) => x, text: (x) => x },
+    { label: x => x, text: x => x },
     cardStyle._default
   );
 
@@ -77,4 +76,4 @@ module.exports = function makeCard(pkg) {
   }, []);
 
   return boxen(cardLines.join("\n"), cardStyle._boxen);
-};
+}

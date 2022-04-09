@@ -1,8 +1,6 @@
 #!/usr/bin/env node
 
-"use strict";
-
-const makeCard = require("./make-card");
-const myPkg = require("../package.json");
+import myPkg from "../package.json" assert { type: "json" };
+import { makeCard } from "./make-card.js";
 
 console.log(makeCard(myPkg));

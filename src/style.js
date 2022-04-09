@@ -1,12 +1,10 @@
-"use strict";
-
-const chalk = require("chalk");
+import chalk from "chalk";
 
 const linkify = (text, link) => {
   return link ? `<a href="${link}">${text}</a>` : text;
 };
 
-module.exports = {
+export default {
   // style override for Work label
   work: {
     text: x => chalk.white(x)

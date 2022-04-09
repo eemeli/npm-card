@@ -1,15 +1,14 @@
 #!/usr/bin/env node
-"use strict";
 
-const { chmodSync, mkdirSync, writeFileSync } = require("fs");
-const { resolve } = require("path");
-const makeCard = require("./make-card");
-const myPkg = require("../package.json");
+import { chmodSync, mkdirSync, writeFileSync } from "fs";
+import { resolve } from "path";
+
+import myPkg from "../package.json" assert { type: "json" };
+import { makeCard } from "./make-card.js";
 
 const card = makeCard(myPkg);
 const src = `\
 #!/usr/bin/env node
-"use strict";
 console.log(
   ${JSON.stringify(card).replace(/\\n/g, '\\n" +\n  "')}
 );
