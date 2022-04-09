@@ -41,14 +41,14 @@
       "npm": "eemeli",
       "github": "eemeli",
       "web": "https://eemeli.org/talks",
-      "work": "Vincit"
+      "work": "Mozilla"
     },
     "data": [
       "          <white>{{name}}</><green> / </><cyan>{{handle}}</>",
       "",
       {
         "label": "<blue>Work</>",
-        "text": "Library developer at <lightblue>{{work}}</>"
+        "text": "Staff Software Engineer at <lightblue>{{work}}</>"
       },
       "",
       {
