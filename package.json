@@ -2,17 +2,18 @@
   "name": "eemeli",
   "version": "1.0.0",
   "description": "Personal npm card for Eemeli Aro (@eemeli)",
-  "main": "dist/card.js",
+  "main": "dist/card.cjs",
   "type": "module",
   "repository": {
     "type": "git",
     "url": "https://github.com/eemeli/npm-card.git"
   },
   "scripts": {
+    "cat": "cat dist/card.txt",
     "prepublishOnly": "node src/build-dist.js"
   },
   "bin": {
-    "eemeli": "dist/card.js"
+    "eemeli": "dist/card.cjs"
   },
   "files": [
     "dist/"
